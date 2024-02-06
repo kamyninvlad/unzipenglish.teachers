@@ -1,0 +1,382 @@
+/* I C O N S */
+@font-face
+  font-family 'icomoon'
+  src  url('fonts/icomoon.eot?pkeimv')
+  src  url('fonts/icomoon.eot?pkeimv#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?pkeimv') format('truetype'),
+    url('fonts/icomoon.woff?pkeimv') format('woff'),
+    url('fonts/icomoon.svg?pkeimv#icomoon') format('svg')
+  font-weight normal
+  font-style normal
+  font-display block
+
+/* B A S I C   L A Y O U T */
+/* ----------------------- */
+body
+    width 100%
+    height auto
+#wrapper
+    width 1100px
+    height fit-content
+    margin 0 auto
+    padding 100px 0
+
+/* C O L O R S */
+/* ----------- */
+body
+    background-color gray    
+.real-post-with-text
+    h1, h2, p, ul > li
+        color black
+    .round-inline-number
+        background-color black
+        color white
+.like-bookmark-share-icon-grid, .comment-direct-icon-grid
+    .icon-cell
+        .grid-icon
+            color black
+            border-color black
+    .text-cell
+        color black
+.page-logo:after, .page-logo:before
+    color white
+.page-navigation
+    color white
+.category-name
+    color #717171
+    
+/* T Y P O G R A P H Y */
+/* ------------------- */
+.real-post-with-text
+    /* H1 = MAIN (COVER) TITLE */
+    /* H2 = SECONDARY (POST) TITLE */
+    h1, h2, .category-name
+        font-family 'Unbounded'
+    h1, h2
+        font-weight 500
+        line-height 1.1em
+        letter-spacing 2px
+    h1
+        font-size 60px
+    h2
+        font-size 50px
+        margin-bottom 40px
+    /* p = BODY TEXT */
+    /* ul = BULLET LIST (DEFINED JUST IN CASE, BUT BEST TO AVOID BY USING THE CUSTOM NUMBERED LIST'S STYLES) */
+    p, ul > li
+        font-family 'Montserrat', sans-serif
+        font-size 30px
+        line-height 1.6em
+    ul
+        list-style disc
+        margin-top 40px
+        margin-left 30px
+    ul > li
+        font-size 25px
+        margin-bottom 20px
+    /* CUSTOM NUMBERED LIST STYLES */
+    .round-inline-number
+        display inline-block
+        width 35px
+        height 35px
+        font-size 20px
+        border-radius 17.5px
+        line-height 35px
+        text-align center
+        margin 0 5px
+    .semibold
+        font-weight 600
+    .bold
+        font-weight 700
+    .italic
+        font-style italic
+/* FOOTER NAVIGATION ARROW  > */
+.empty-template-post-no-text
+    .page-navigation
+        font-family 'icomoon'
+        font-size 60px
+        line-height 25px
+        text-align center
+/* CUSTOM TEXT STYLES FOR SOME PAGES/ELEMENTS */
+/* FIRST PAGE (COVER PAGE) EXCLUSIVE TEXT STYLES */
+.category-name
+    font-weight 400
+    font-size 30px
+    letter-spacing 1px
+    line-height 1.2em
+    margin-bottom 30px
+/* LAST PAGE (NEXT STEPS) EXCLUSIVE TEXT STYLES */
+#next-steps-page
+    h2
+        text-align center
+        margin-bottom 50px
+        margin-top -6px
+
+/* C O V E R   T E M P L A T E   C R E A T I O N */
+/* --------------------------------------------- */
+
+#empty-cover-template-no-text
+    margin-top 0
+#cover-image-wrapper
+    display flex
+    align-items end
+    justify-content right
+    #cover-image
+        height 800px
+        width 640px
+        background-image url('images/COVER-IMAGE.png')
+        background-size contain
+        background-repeat no-repeat
+        background-position 200px bottom
+        
+/* R E A L   C O V E R */
+/* ------------------- */
+
+#cover-with-text
+    width 1080px
+    height 1080px
+    padding 200px 200px 250px 200px
+    box-sizing border-box
+    margin-top 100px
+    background-image url('images/COVER-BACKGROUND.png')
+    background-size contain
+    background-position center
+    display flex
+    flex-direction column
+    align-items left
+    justify-content space-between
+        
+/* F O O T E R */
+/* ----------- */
+.post-footer
+    /* size */
+    width 100%
+    height 150px
+    /* positioning */
+    display flex
+    justify-content space-between
+    align-items center
+.no-navigation
+    .post-footer
+        justify-content right!important
+    .page-logo:after
+        display none
+.page-navigation
+    width 70px
+    height 25px
+    border 2px solid white
+    border-radius 15px
+    padding 10px 20px
+.page-logo
+    width 200px
+    height 150px
+    background-image url('images/LOGO-white.svg')
+    background-size contain
+    background-repeat no-repeat
+    background-position center
+    opacity 0.5
+/* TEACHER ACCOUNT LABEL NEXT TO THE LOGO IN THE FOOTER */
+.page-logo:after, .no-navigation .page-logo:before
+    content 'Teachers'
+    display block
+    /* size */
+    width fit-content
+    line-height 20px
+    padding 5px 11px 5px 15px
+    /* positioning */
+    position relative
+    top 50%
+    transform translateY(-50%)
+    /* text styles */
+    font-family 'Unbounded'
+    font-size 14px
+    font-weight 500
+    text-align center
+    letter-spacing 5px
+    text-transform uppercase
+    /* additional styles */
+    border 2px solid white
+/* POSITIONING THE LABEL ON THE RIGHT OR ON THE LEFT*/
+.page-logo:after
+    left 200px
+    margin-left 30px
+.no-navigation .page-logo:before
+    right 200px
+    margin-right 30px
+/* CUSTOM FOOTER FOR A PAGE WITH NO NAVIGATION ARROW */
+.no-navigation
+    .page-logo:before
+        font-size 14px
+        font-weight 500
+        line-height 20px
+        height 20px
+        text-align center
+        letter-spacing 5px
+        text-transform uppercase
+
+/* E M P T Y   P O S T S   U S E D   A S   T E M P L A T E S */
+/* --------------------------------------------------------- */
+
+.empty-template-post-no-text
+    margin 0 auto
+    margin-top 100px
+    width 880px
+    height 830px
+    padding 100px 100px 150px 100px
+    background-image url('images/MATRIX.jpg')
+    background-size cover
+    background-position center
+    background-repeat no-repeat
+.top-layer-paper-sheet, .bottom-layer-paper-sheet
+    width 100%
+    height 100%
+.top-layer-paper-sheet
+    background-image url('images/PAPER-TEXTURE.png')
+    background-color rgba(255, 255, 255, 0.7)
+    background-blend-mode overlay
+    transform rotate(3deg)
+.bottom-layer-paper-sheet
+    background-image url('images/PAPER-TEXTURE-INTENSE.png')
+    transform rotate(-3deg)
+    filter url(#squiggle)
+
+/* R E A L   P O S T S   W I T H   T E X T   O R   C O N T E N T */
+/* ------------------------------------------------------------- */
+.real-post-with-text
+    margin 0 auto
+    width 1080px
+    height 1080px
+    padding 200px 200px 250px 200px
+    box-sizing border-box
+    margin-top 100px
+    background-image url('images/POST-BACKGROUND.png')
+    background-size contain
+    background-position center
+
+/* S T A N D A R D   S T Y L E S   F O R   I M A G E S */
+/* --------------------------------------------------- */
+.post-image-right, .post-image-left
+    object-fit contain
+.post-image-right
+    float right
+.post-image-left
+    float left
+
+/* C U S T O M   S T Y L E S   F O R   I M A G E S */
+/* ----------------------------------------------- */
+#exoskeleton-image
+    /* set width */
+    width 400px
+    /* text wrap settings – works well in Firefox */
+    shape-outside polygon(40.75% 80.18%, 73.88% 43.65%, 87.2% 5.34%, 24.3% 87.62%)
+    shape-margin 50px
+    /* tilt */
+    transform rotate(-3deg)
+    /* positioning */
+    margin-top -15px
+    margin-left -180px
+#clock-image
+    /* set width */
+    width 350px
+    /* text wrap settings – works well in Firefox */
+    shape-outside polygon(12.62% 64.18%, 31.59% 35.05%, 52.24% -0.84%, 31.66% 97.46%)
+    shape-margin 50px
+    /* tilt */
+    transform rotate(20deg)
+    /* positioning */
+    margin-right -200px
+    margin-top -50px
+#dinasour-image
+    /* set width */
+    width 400px
+    /* text wrap settings – works well in Firefox */
+    shape-outside polygon(3.4% 59.06%, 63.03% 25.09%, 116.12% -24.46%, 92.38% 95.71%)
+    shape-margin 30px
+    /* tilt */
+    transform rotate(-3deg)
+    /* positioning */
+    margin-right -260px
+    margin-top -100px
+#scales-image
+    /* set width */
+    width 500px
+    /* text wrap settings – works well in Firefox */
+    shape-outside polygon(-1.22% 70.86%, 38.03% 11.69%, 96.89% -1.46%, 99.3% 99.71%)
+    shape-margin 30px 
+    /* positioning */
+    margin-right -240px
+
+/* L A S T   P A G E   (NEXT STEPS) */
+/* -------------------------------- */
+#next-steps-page
+    background-image url('images/POST-BACKGROUND-NO-NAVIGATION.png')!important
+#next-steps-content
+    display flex
+    justify-content center
+    align-items center
+    height 535px
+.icon-grid-wrapper > h3
+    font-family 'Unbounded', sans-serif
+    margin-bottom 25px
+    font-weight 700
+    font-size 25px
+    text-align center
+    width 100%
+    letter-spacing 0.5px
+
+/* I C O N   G R I D   O N   T H E   L A S T   P A G E */
+/* --------------------------------------------------- */
+.like-bookmark-share-icon-grid, .comment-direct-icon-grid
+    /* ALL GRID (TABLE) CELLS' (2 TYPES OF CELLS: ICON CELLS [TH] + TEXT CELLS [TD]) - STANDARD STYLES */ 
+    tr > th.icon-cell, td.text-cell
+        display block
+        float left
+        padding 0 20px
+        text-align center
+        vertical-align middle
+    /* ICON WRAPPER INSIDE AN ICON CELL*/
+    th.icon-cell
+        width 120px
+        .icon-cell-icon
+            /* icon font and icon size */
+            font-family 'icomoon'
+            font-size 40px
+            /* icon wrapper */
+            display block
+            width 56px
+            height fit-content
+            padding 10px
+            /* centering the icon inside its wrapper */
+            text-align center
+            line-height 56px
+            /* icon wrapper border */
+            border-width 2px
+            border-style solid
+            border-radius 15px
+            /* horizontally centering the wrapper inside the table cell */
+            margin 0 auto
+    /* TEXT CELL STYLES */
+    td.text-cell
+        /* text styles */
+        font-family 'Montserrat'
+        font-size 20px
+        font-weight 600 
+        /* cell size – the width had been defined earlier */
+        height 48px
+        width 140px
+        /* the standard cell has 2 lines (48/2=24) */
+        line-height 24px
+        /* cell padding */
+        padding 20px 10px
+        padding-bottom 0px
+    .one-line-cell
+        /* vertically align text if there's only one line */
+        line-height 48px!important
+.like-bookmark-share-wrapper, .comment-direct-wrapper
+    width fit-content
+    padding 20px
+    border 1px dashed black
+    border-radius 20px
+    margin 0 auto
+.like-bookmark-share-wrapper
+    margin-bottom 40px
